@@ -46,6 +46,14 @@ header {
     color: gray;
 }
 
+.nav ul li a {
+    transition: .3s;
+}
+
+.nav ul li a:hover {
+    color: #96BB7C;
+}
+
 .nav ul li:not(:last-child) {
     margin: 0 20px 0 0;
 }
@@ -63,6 +71,12 @@ header {
     margin: 0 10px 0 0;
     color: #96BB7C;
     font-size: 15px;
+    transition: .4s;
+}
+
+.login:hover {
+    color: #fff;
+    background: #96BB7C;
 }
 
 .join {
@@ -74,6 +88,12 @@ header {
     width: 100px;
     height: 40px;
     border: none;
+    transition: .4s;
+}
+
+.join:hover {
+    background: #fff;
+    color: #96BB7C;
 }
 
 /* Main */
@@ -114,6 +134,13 @@ header {
                 width: 160px;
                 color: #fff;
                 margin: 0 10px 0 0;
+                transition: .4s;
+            }
+
+            button:first-child:hover {
+                border: 2px solid #96BB7C;
+                background: none;
+                color: #96BB7C;
             }
 
             button:last-child {
@@ -121,6 +148,13 @@ header {
                 height: 50px;
                 width: 160px;
                 color: #96BB7C;
+                transition: .4s;
+            }
+
+            button:last-child:hover {
+                background: #96BB7C;
+                color: #fff;
+                border: 0;
             }
         }
     }
@@ -244,6 +278,7 @@ header {
         display: flex;
         text-align: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         .left, .right {
             width: 40%;
             img {
@@ -299,6 +334,12 @@ header {
                 height: 54px;
                 background: #96BB7C;
                 border: 0;
+                transition: .4s;
+            }
+            input[type=button]:hover {
+                background: none;
+                color: #96BB7C;
+                border: 2px solid #96BB7C;
             }
         }
     }
@@ -312,6 +353,7 @@ footer {
     display: flex;
     justify-content: space-between;
     text-align: center;
+    flex-wrap: wrap;
 
     .footer__nav {
         h3 {
@@ -343,9 +385,16 @@ footer {
         text-align: center;
         .left {
             width: 100%;
+            z-index: 1;
         }
         .right {
             display: none;
+            // position: absolute;
+            // top: 120px;
+            // right: -20px;
+            // img {
+            //     width: 80%;
+            // }
         }
     }
     .main__buttons {
@@ -366,6 +415,9 @@ footer {
         .left {
             width: 100%;
         }
+        .right {
+            margin: 20px 0;
+        }
     }
     .testimonials {
         text-align: center;
@@ -385,11 +437,9 @@ footer {
     }
     .testimonials {
         .bottom {
-            .left {
+            .left, .right {
+                margin: 20px 0;
                 width: 100%;
-            }
-            .right {
-                display: none;
             }
         }
     }
@@ -417,8 +467,11 @@ footer {
         width: 90% !important;
         text-align: center;
     }
-    .footer__nav:last-child {
-            display: none;
+    footer {
+        justify-content: center;
+        .footer__nav {
+                margin: 10px;
+        }
     }
 }
 

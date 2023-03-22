@@ -43,6 +43,14 @@ header {
   color: gray;
 }
 
+.nav ul li a {
+  transition: 0.3s;
+}
+
+.nav ul li a:hover {
+  color: #96BB7C;
+}
+
 .nav ul li:not(:last-child) {
   margin: 0 20px 0 0;
 }
@@ -60,6 +68,12 @@ header {
   margin: 0 10px 0 0;
   color: #96BB7C;
   font-size: 15px;
+  transition: 0.4s;
+}
+
+.login:hover {
+  color: #fff;
+  background: #96BB7C;
 }
 
 .join {
@@ -71,6 +85,12 @@ header {
   width: 100px;
   height: 40px;
   border: none;
+  transition: 0.4s;
+}
+
+.join:hover {
+  background: #fff;
+  color: #96BB7C;
 }
 
 /* Main */
@@ -107,12 +127,24 @@ header {
   width: 160px;
   color: #fff;
   margin: 0 10px 0 0;
+  transition: 0.4s;
+}
+.main .left .main__buttons button:first-child:hover {
+  border: 2px solid #96BB7C;
+  background: none;
+  color: #96BB7C;
 }
 .main .left .main__buttons button:last-child {
   border: 2px solid #96BB7C;
   height: 50px;
   width: 160px;
   color: #96BB7C;
+  transition: 0.4s;
+}
+.main .left .main__buttons button:last-child:hover {
+  background: #96BB7C;
+  color: #fff;
+  border: 0;
 }
 .main .right {
   display: flex;
@@ -214,6 +246,7 @@ header {
   display: flex;
   text-align: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .testimonials .bottom .left, .testimonials .bottom .right {
   width: 40%;
@@ -268,6 +301,12 @@ header {
   height: 54px;
   background: #96BB7C;
   border: 0;
+  transition: 0.4s;
+}
+.newsletter__wrapper .newsletter form input[type=button]:hover {
+  background: none;
+  color: #96BB7C;
+  border: 2px solid #96BB7C;
 }
 
 footer {
@@ -276,6 +315,7 @@ footer {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  flex-wrap: wrap;
 }
 footer .footer__nav h3 {
   margin: 0 0 25px;
@@ -303,6 +343,7 @@ footer .footer__nav ul li {
   }
   .main .left {
     width: 100%;
+    z-index: 1;
   }
   .main .right {
     display: none;
@@ -324,6 +365,9 @@ footer .footer__nav ul li {
   .video .left {
     width: 100%;
   }
+  .video .right {
+    margin: 20px 0;
+  }
   .testimonials {
     text-align: center;
   }
@@ -339,11 +383,9 @@ footer .footer__nav ul li {
   .nav {
     display: none;
   }
-  .testimonials .bottom .left {
+  .testimonials .bottom .left, .testimonials .bottom .right {
+    margin: 20px 0;
     width: 100%;
-  }
-  .testimonials .bottom .right {
-    display: none;
   }
 }
 @media (max-width: 600px) {
@@ -360,8 +402,11 @@ footer .footer__nav ul li {
     width: 90% !important;
     text-align: center;
   }
-  .footer__nav:last-child {
-    display: none;
+  footer {
+    justify-content: center;
+  }
+  footer .footer__nav {
+    margin: 10px;
   }
 }
 @media (max-width: 450px) {
